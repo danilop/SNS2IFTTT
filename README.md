@@ -2,6 +2,10 @@
 
 A sample [AWS Lambda](https://aws.amazon.com/lambda/) function to push [Amazon SNS](https://aws.amazon.com/sns/) notifications to [IFTTT](https://ifttt.com) via the [Maker](https://ifttt.com/maker) channel.
 
+Here's a few customizations of this project to better handle specific events via SNS:
+- [CloudWatchAlarm2IFTTT](https://github.com/danilop/CloudWatchAlarm2IFTTT) for [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) alarms
+- [AutoScaling2IFTTT](https://github.com/danilop/AutoScaling2IFTTT) for [EC2 Auto Scaling](https://aws.amazon.com/autoscaling/) notifications
+
 ## License
 
 Copyright (c) 2015 Danilo Poccia, http://danilop.net
