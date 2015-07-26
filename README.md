@@ -37,16 +37,17 @@ This code is licensed under the The MIT License (MIT). Please see the LICENSE fi
 8. Select Receive a Web Request
 9. Write the Event Name exacly as is the iftttMakerEventName variable of the Lambda function (step 3.4 on AWS)
 10. Select Create Trigger
-11. Choose whatever you want as Action ('that'), for example:
-  1. Choose iOS or Android Notifications to receive it on your mobile (you need the IF app from IFTTT installed on the device)
-  2. Choose a Channel from the Connected Home category to have a *visible* effect, e.g. Philips Hue to change the color of your lights
-  3. Choose Slack to send a message to your team
-  4. Choose Trello to create a new card
-  5. Choose GitHub to create a new issue
+11. 'Value1' contains the body of the SNS message
+12. Choose whatever you want as Action ('that'), for example:
+  1. iOS or Android Notifications to receive it on your mobile (you need the IF app from IFTTT installed on the device), e.g. you can set the notification to 'CloudWatch {{Value1}}'
+  2. A Channel from the Connected Home category to have a *visible* effect, e.g. Philips Hue to change the color of your lights to red
+  3. Slack to send a message to your team
+  4. Trello to create a new card
+  5. GitHub to create a new issue
 
 ### On AWS (optional)
 
-12. You can test the setup from the SNS web console
+13. You can test the setup from the SNS web console
   1. Select the topic
   2. Publish a test message
 
