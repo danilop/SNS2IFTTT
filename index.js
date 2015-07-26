@@ -24,7 +24,7 @@ exports.handler = function(event, context) {
     // The output is send as 'value1' to IFTTT Maker 
     var params = querystring.stringify({value1: output});
 
-    https.get(iftttMakerUrl + '?' + params, function(res) {
+    https.get(encodeURI(iftttMakerUrl) + '?' + params, function(res) {
         console.log("Got response: " + res.statusCode);
         res.setEncoding('utf8');
         res.on('data', function(d) {
