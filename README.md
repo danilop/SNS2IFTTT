@@ -39,7 +39,7 @@ This code is licensed under the The MIT License (MIT). Please see the LICENSE fi
 10. Select Create Trigger
 11. 'Value1' contains the body of the SNS message
 12. Choose whatever you want as Action ('that'), for example:
-  1. iOS or Android Notifications to receive it on your mobile (you need the IF app from IFTTT installed on the device), e.g. you can set the notification to 'CloudWatch {{Value1}}'
+  1. iOS or Android Notifications to receive it on your mobile (you need the IF app from IFTTT installed on the device), e.g. you can set the notification to 'SNS {{Value1}}'
   2. A Channel from the Connected Home category to have a *visible* effect, e.g. Philips Hue to change the color of your lights to red
   3. Slack to send a message to your team
   4. Trello to create a new card
