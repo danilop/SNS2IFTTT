@@ -12,16 +12,16 @@ This code is licensed under the The MIT License (MIT). Please see the LICENSE fi
 
 ### On IFTTT
 
-1. Go to https://ifttt.com/maker and write down your secret key
+1. Go to [https://ifttt.com/maker](https://ifttt.com/maker) and write down your secret key
 
 ### On AWS
 
-2. Create a new Amazon SNS topic, e.g. 'ifttt-maker'
-3. Create a new AWS Lambda function, e.g. 'sns-2-ifttt'
+2. Create a new Amazon SNS topic, e.g. `ifttt-maker`
+3. Create a new AWS Lambda function, e.g. `sns-2-ifttt`
   1. Use Node.js as runtime
-  2. Paste the code inline from the index.js file included in this repository
-  3. Replace the iftttMakerSecretKey with the one you wrote down at step 1
-  4. (Optional) Replace the iftttMakerEventName with the one you want to use
+  2. Paste the code inline from the `index.js` file included in this repository
+  3. Replace the `iftttMakerSecretKey` with the one you wrote down at step 1
+  4. (Optional) Replace the `iftttMakerEventName` with the one you want to use
   5. Leave the default handler
   6. Use a basic execution role
   7. Leave the default memory (128MB) and timeout (3s)
@@ -35,11 +35,11 @@ This code is licensed under the The MIT License (MIT). Please see the LICENSE fi
 6. Create a Recipes
 7. Choose Maker as Trigger ('this')
 8. Select Receive a Web Request
-9. Write the Event Name exacly as is the iftttMakerEventName variable of the Lambda function (step 3.4 on AWS)
+9. Write the Event Name exacly as is the `iftttMakerEventName` variable of the Lambda function (step 3.4 on AWS)
 10. Select Create Trigger
-11. 'Value1' contains the body of the SNS message
+11. `Value1` contains the body of the SNS message
 12. Choose whatever you want as Action ('that'), for example:
-  1. iOS or Android Notifications to receive it on your mobile (you need the IF app from IFTTT installed on the device), e.g. you can set the notification to 'SNS {{Value1}}'
+  1. iOS or Android Notifications to receive it on your mobile (you need the IF app from IFTTT installed on the device), e.g. you can set the notification to `SNS {{Value1}}`
   2. A Channel from the Connected Home category to have a *visible* effect, e.g. [Philips Hue](https://ifttt.com/hue) to change the color of your lights to red
   3. Slack to send a message to your team
   4. Trello to create a new card
